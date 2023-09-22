@@ -29,7 +29,7 @@ void __cdecl wmain(int argc, const wchar_t* argv[])
 
     //
     // Get the number of processors and system page size.
-    //
+    // CPU 갯수를 가지고 옵니다
 
     SYSTEM_INFO SystemInfo;
     GetSystemInfo(&SystemInfo);
@@ -38,7 +38,7 @@ void __cdecl wmain(int argc, const wchar_t* argv[])
 
     //
     // Get the highest node number.
-    //
+    // 가장 높은 누마 노드 넘버를 가지고 옵니다.
 
     if (!GetNumaHighestNodeNumber(&HighestNodeNumber))
     {
@@ -54,7 +54,7 @@ void __cdecl wmain(int argc, const wchar_t* argv[])
 
     //
     // Allocate array of pointers to memory blocks.
-    //
+    // 
 
     Buffers = (PVOID*)malloc(sizeof(PVOID) * NumberOfProcessors);
 
